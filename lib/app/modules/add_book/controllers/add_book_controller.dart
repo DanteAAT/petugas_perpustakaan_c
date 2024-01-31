@@ -5,6 +5,7 @@ import 'package:petugas_perpustakaan_c/app/data/constant/endpoint.dart';
 import 'package:petugas_perpustakaan_c/app/data/provider/api_provider.dart';
 import 'package:petugas_perpustakaan_c/app/data/provider/storage_provider.dart';
 import 'package:dio/dio.dart' as dio;
+import 'package:petugas_perpustakaan_c/app/modules/book/controllers/book_controller.dart';
 import 'package:petugas_perpustakaan_c/app/routes/app_pages.dart';
 
 class AddBookController extends GetxController {
@@ -16,6 +17,7 @@ class AddBookController extends GetxController {
   final TextEditingController tahun_terbitController = TextEditingController();
   final count = 0.obs;
   final loading = false.obs;
+  final BookController _bookController = Get.find();
 
   @override
   void onInit() {
@@ -47,6 +49,7 @@ class AddBookController extends GetxController {
 
             }));
         if (response.statusCode == 201) {
+
           Get.back();
           // Get.snackbar("Berhasil", "",
           //     backgroundColor: Colors.green);

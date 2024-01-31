@@ -68,11 +68,11 @@ class DataBook {
     kategori = json['kategori'] != null ? Kategori.fromJson(json['kategori']) : null;
   }
   int? id;
-  int? kategoriId;
+  String? kategoriId;
   String? judul;
   String? penulis;
   String? penerbit;
-  int? tahunTerbit;
+  String? tahunTerbit;
   String? createdAt;
   String? updatedAt;
   Kategori? kategori;
